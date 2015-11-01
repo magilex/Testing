@@ -9,8 +9,24 @@ public class ShopTests {
 	Shop shop = new Shop();
 
 	@Test
+	// Triple A Testing
 	public void addEmployee() {
-		fail("Not yet implemented");
+		// This is for preparing out test
+		// Arrange
+		String firstName = "Eli";
+		String lastName = "Kali";
+		
+		// This is what we want to really test
+		// Act
+		shop.addEmployee(firstName, lastName);
+		
+		
+		// This is how we can verify it works
+		// Assert
+		Employee e = shop.employees.get(0);
+		
+		assertEquals(e.firstName, firstName);
+		assertEquals(e.lastName, lastName);
 	}
 	
 	@Test
